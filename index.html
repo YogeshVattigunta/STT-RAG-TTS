@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice Agent</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+      <div id="status" class="idle">Idle</div>
+
+      <div class="chat-box you">
+        <strong>You</strong>
+        <div id="you">—</div>
+      </div>
+
+      <div class="chat-box assistant">
+        <strong>Agent</strong>
+        <div id="assistant">—</div>
+      </div>
+
+      <div class="controls">
+        <button id="start" class="circle record">🎤</button>
+        <button id="stop" class="circle stop">⏹</button>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right-panel">
+      <model-viewer
+        src="robot.glb"
+        class="robot"
+        camera-controls
+        autoplay
+        animation-name="Idle Animation"
+        environment-image="neutral"
+        exposure="1"
+        shadow-intensity="1.2"
+        interaction-prompt="none">
+      </model-viewer>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
